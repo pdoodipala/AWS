@@ -50,6 +50,5 @@ jobs:
         working-directory: Terraform/
         run: terraform apply -auto-approve -var-file=terraform.tfvars
         env:
-          regionName: ${{ secrets.REGIONNAME }}
           env: ${{ secrets.ENV }}
           vpc_cidr: ${{secrets.VPC_CIDR}}
