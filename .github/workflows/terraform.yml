@@ -47,11 +47,4 @@ jobs:
         run: |
           echo "ENV = \"${{ secrets.ENV }}\"" >> terraform.tfvars
           echo "VPC_CIDR = \"${{ secrets.VPC_CIDR }}\"" >> terraform.tfvars
-
-      - name: Terraform Plan
-        working-directory: Terraform/
-        run: terraform plan -var-file=terraform.tfvars
-
-      - name: Terraform Apply
-        working-directory: Terraform/
-        run: terraform apply -auto-approve -var-file=terraform.tfvars
+          cat terraform.tfvars
