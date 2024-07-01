@@ -56,4 +56,4 @@ jobs:
         working-directory: Terraform/
         run:  |
           sleep 120
-          terraform destroy
+          terraform destroy -auto-approve -var-file=terraform.tfvars
