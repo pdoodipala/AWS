@@ -1,6 +1,7 @@
 name: Terraform Deployment
 
 on:
+  workflow_dispatch:
   push:
     paths:
       - 'Terraform/**'  # Trigger workflow on push to changes in 'terraform/' directory
