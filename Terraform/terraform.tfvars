@@ -1,2 +1,2 @@
-ENV="ENV"
-VPC_CIDR="VPC_CIDR"
+ENV="dev"
+VPC_CIDR="10.0.0.0/16"
