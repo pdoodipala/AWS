@@ -42,10 +42,16 @@ jobs:
         working-directory: Terraform/
         run: terraform validate
 
+      - name: Create terraform.tfvars
+        working-directory: Terraform/
+        run: |
+          echo "ENV = \"${{ secrets.ENV }}\"" >> terraform.tfvars
+          echo "VPC_CIDR = \"${{ secrets.VPC_CIDR }}\"" >> terraform.tfvars
+
       - name: Terraform Plan
         working-directory: Terraform/
-        run: terraform plan
+        run: terraform plan -var-file=terraform.tfvars
 
       - name: Terraform Apply
         working-directory: Terraform/
-        run: terraform apply -auto-approve
+        run: terraform apply -auto-approve -var-file=terraform.tfvars
