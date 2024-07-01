@@ -45,11 +45,9 @@ jobs:
       - name: Terraform Plan
         working-directory: Terraform/
         run: |
-          cat terraform.tfvars
           terraform plan -var-file=terraform.tfvars
 
       - name: Terraform Apply
         working-directory: Terraform/
         run: |
-          cat terraform.tfvars
           terraform apply -auto-approve -var-file=terraform.tfvars

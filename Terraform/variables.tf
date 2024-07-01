@@ -32,3 +32,28 @@ variable "availability-zones" {
   type = list(string)
   default = [ "us-east-1a", "us-east-1b" ]
 }
+
+variable "key_pair_name" {
+  type        = string
+  description = "The key pair name for connecting to ec2"
+}
+
+variable "instance_ami" {
+  type        = string
+  description = "ami for ec2 instance"
+}
+
+variable "instanceType" {
+  type        = string
+  description = "Type of instance"
+}
+
+variable "root_device_size" {
+  type        = string
+  description = "root volume size for ec2 instance"
+}
+
+variable "root_device_type" {
+  type        = string
+  description = "root volume device type for ec2 instance"
+}

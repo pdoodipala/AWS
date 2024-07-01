@@ -42,3 +42,14 @@ locals {
   ssh = "ssh-devopstooling-${var.ENV}"
 }
 
+locals {
+  ec2role = "ec2role-devopstooling-${var.ENV}"
+}
+
+locals {
+  ec2profile = "ec2profile-devopstooling-${var.ENV}"
+}
+
+locals {
+  ec2 = "ec2-devopstooling-${var.ENV}"
+}
