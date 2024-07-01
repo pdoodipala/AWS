@@ -37,3 +37,8 @@ locals {
 locals {
   nat = "nat-devopstooling-${var.ENV}"
 }
+
+locals {
+  ssh = "ssh-devopstooling-${var.ENV}"
+}
+
