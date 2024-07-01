@@ -44,11 +44,11 @@ jobs:
 
       - name: Terraform Plan
         working-directory: Terraform/
-        run: terraform plan -var-file=terraform.tfvars
+        run: terraform plan -var-file=variables.tf
 
       - name: Terraform Apply
         working-directory: Terraform/
-        run: terraform apply -auto-approve -var-file=terraform.tfvars
+        run: terraform apply -auto-approve -var-file=variables.tf
         env:
           env: ${{ secrets.ENV }}
           vpc_cidr: ${{secrets.VPC_CIDR}}
