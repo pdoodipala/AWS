@@ -1,11 +1,11 @@
 resource "aws_vpc" "vpc-devopstooling" {
-  cidr_block = var.vpc_cidr
+  cidr_block = var.VPC_CIDR
 
   enable_dns_hostnames = true
 
   tags = {
     Name = local.vpcName
-    env  = var.env
+    env  = var.ENV
   }
 }
 

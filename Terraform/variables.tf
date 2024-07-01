@@ -1,12 +1,12 @@
-variable "regionName" {
+variable "REGIONNAME" {
   type = string
 }
 
-variable "env" {
+variable "ENV" {
   type        = string
   description = "The env for which infrastructure is being provisioned (dev, stage, prod)"
 }
 
-variable "vpc_cidr" {
+variable "VPC_CIDR" {
   type = string
 }

@@ -1,3 +1,3 @@
-regionName="us-east-1"
-env="ENV"
-vpc_cidr="VPC_CIDR"
+REGIONNAME="REGIONNAME"
+ENV="ENV"
+VPC_CIDR="VPC_CIDR"

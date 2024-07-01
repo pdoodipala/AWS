@@ -1,3 +1,3 @@
 locals {
-  vpcName = "vpc-devopstooling-${var.env}"
+  vpcName = "vpc-devopstooling-${var.ENV}"
 }
