@@ -43,7 +43,11 @@ jobs:
 
       - name: Terraform Plan
         working-directory: Terraform/
-        run: terraform plan -out=tfplan
+        run: terraform plan \
+          -var="regionName=${{ env.REGIONNAME }}" \
+          -var="env=${{ env.ENV }}" \
+          -var="vpc_cidr=${{ env.VPC_CIDR }}" \
+          -out=tfplan
 
       - name: Terraform Apply
         working-directory: Terraform/
